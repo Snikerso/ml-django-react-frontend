@@ -53,7 +53,6 @@ function Image({ srce, typeimage, beta }) {
                 <>
                     <StyledWrapper>
                         <Img style={{ backgroundImage: `url(${srce})` }} />
-                        <IconDelete />
                     </StyledWrapper>
 
                 </>

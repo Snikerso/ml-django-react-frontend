@@ -16,22 +16,25 @@ import { motion } from 'framer-motion'
 
 const PuzzlesStyle = styled(motion.custom(PuzzlesSVG))`
         width:200px;
-
+        align-self:center;
+        justify-self:center;
+       
         style{
             width:200px;
+               
         }
 
 `;
 
-const Puzzles = ({width}) => {
+const Puzzles = ({left, width }) => {
 
     return (
         <PuzzlesStyle
-            style={{width:width}}
-            initial={{x:30}}
-            animate={{ rotate:-20}}
-            transition = {{ duration: 3, loop: 0 }}
-            whileHover = {{ scale: 1.2 }} />
+            style={{ width: width, transform: 'translateX(30px)' }}
+            initial={{ x: left,y:-60 }}
+            animate={{ rotate: -20 }}
+            transition={{ duration: 3, loop: 0 }}
+            whileHover={{ scale: 1.2 }} />
     )
 }
 export default Puzzles
